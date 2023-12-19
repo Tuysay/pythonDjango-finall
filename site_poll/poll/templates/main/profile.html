@@ -6,6 +6,11 @@
 {% block content %}
  <div class="h5 mr-lg-6 p-3">
     <p class="nav-link text-dark" style ="margin-top: 80px">Приветствую ({{ user.username }}) </p>
+     {% if user.avatar %}
+        <img style="max-height: 80px; " src="{{ user.avatar.url }}" alt="Аватар">
+     {% else %}
+         <h1> Без авы(</h1>
+     {% endif %}
     <h4 class="h5 mr-lg-6 p-3 text-center " style="border: solid 1px red; border-radius: 1em; margin-top: 50px">Опросы: <span class="text-info">{{ counter }}</span></h4>
  </div>
 {% block main %}
@@ -17,7 +22,6 @@
             </div>
             <ul class="list-group">
                 {% for poll in polls %}
-
                     <li class="list-group-item">
                         <strong>{{ poll.question }}</strong>
                         <span class="pull-right">

@@ -4,7 +4,7 @@ from .views import BBLoginView, RegisterView, profile, delete_profile, delete_po
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('profile/', profile, name='profile'),
+    path('profile/<int:id>', profile, name='profile'),
     path('login/', BBLoginView.as_view(), name='login'),
     path('logout/', views.logout, name='logout'),
     path('register/', RegisterView.as_view(), name='register'),

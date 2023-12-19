@@ -122,6 +122,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
+MEDIA_URL = 'files/'
+
 AUTH_USER_MODEL = 'poll.User'
 
 LOGIN_REDIRECT_URL = '/profile'

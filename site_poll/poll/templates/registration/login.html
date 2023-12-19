@@ -7,7 +7,7 @@
     <h4 class="h6 mr-lg-9 p-3 text-center " style="border: solid 1px red; border-radius: 1em; margin-top: 80px ">Войти</h4>
      {% if request.user.is_authenticated %}
         <p>Вы уже выполнили вход. <a href="{% url 'logout' %}">Выйти.</a></p>
-        <p>Вернуться в профиль. <a href="{% url 'profile' %}">Профиль</a> </p>
+        <p>Вернуться в профиль. <a href="{% url 'profile' user.id %}">Профиль</a> </p>
     {% else %}
         <form method="post">
             {% csrf_token %}

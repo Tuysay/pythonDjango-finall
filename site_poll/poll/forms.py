@@ -33,7 +33,7 @@ class RegisterUserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username', 'fio', 'gender', 'birth_date')
+        fields = ('username', 'fio', 'gender', 'birth_date', 'avatar')
 
 
 
